@@ -1,4 +1,5 @@
 #include<stdio.h>
+int multi();
 
 int main(void) {
     int i = 0, j = 1;
@@ -6,8 +7,11 @@ int main(void) {
     scanf("%d", &i);
 
     while(j < 10) {
-        printf("%d X %d = %d\n", i, j, i * j);
+        printf("%d X %d = %d\n", i, j, multi(i, j));
         j++;
     }
     return 0;
 }
+    int multi(i, j) {
+    return i * j;
+    }
