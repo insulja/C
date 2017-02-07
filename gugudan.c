@@ -1,22 +1,18 @@
 #include<stdio.h>
-int multi();
+int multi(int i, int j);
 
 int main(void) {
-    int i = 0, j = 1, cnt;
+    int num;
     printf("Enter Gugudan Number : ");
-    scanf("%d", &i);
+    scanf("%d", &num);
 
-    for(cnt = 0; cnt < 9; cnt++) {
-        printf("%d X %d = %d\n", i, j, multi(i, j));
-        j++;
+    for(int i = 1; i < 10; i++) {
+        printf("%d X %d = %d\n", num, i, multi(num, i));
     }
 
-    // while(j < 10) {
-    //     printf("%d X %d = %d\n", i, j, multi(i, j));
-    //    j++;
     return 0;
 }
 
-    int multi(i, j) {
+int multi(int i, int j) {
     return i * j;
-    }
+}
